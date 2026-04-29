@@ -247,7 +247,7 @@ const styles = StyleSheet.create({
     left: 0,
     right: 0,
     paddingHorizontal: 28,
-    paddingBottom: 52,
+    paddingBottom: 51,
   },
 
   gyymtrakkrprroSlideContainer: {
