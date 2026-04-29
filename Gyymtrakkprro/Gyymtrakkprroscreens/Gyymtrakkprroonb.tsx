@@ -12,6 +12,7 @@ import {
   ImageBackground,
   Image,
   ScrollView,
+  Platform,
 } from 'react-native';
 
 const {height: gyymtrakkrprroWindowHeight} = Dimensions.get('window');
@@ -20,7 +21,10 @@ const gyymtrakkrprroSlides = [
   {
     gyymtrakkrprroId: '1',
     gyymtrakkrprroTag: 'WELCOME',
-    gyymtrakkrprroTitle: 'Welcome to\nFitTrack Pro',
+    gyymtrakkrprroTitle:
+      Platform.OS === 'ios'
+        ? 'Welcome to\nRainbest ProTrack'
+        : 'Welcome to\nFitTrack Pro',
     gyymtrakkrprroDescription:
       'Your ultimate fitness companion. Track workouts, monitor nutrition, and crush your goals every single day.',
     gyymtrakkrprroImage: require('../../assets/i/gyymtrakkprroonbg1.png'),
