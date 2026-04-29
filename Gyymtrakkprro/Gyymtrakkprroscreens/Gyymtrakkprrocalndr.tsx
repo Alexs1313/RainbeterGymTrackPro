@@ -12,6 +12,7 @@ import {
   TouchableOpacity,
   View,
 } from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 type GymSet = {
   gyymtrakkrprroId: string;
@@ -312,7 +313,11 @@ const Gyymtrakkprrocalndr = () => {
   );
 
   return (
-    <View style={styles.gyymtrakkrprroRoot}>
+    <LinearGradient
+      colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 1}}
+      style={styles.gyymtrakkrprroRoot}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.gyymtrakkrprroScroll}>
@@ -542,7 +547,7 @@ const Gyymtrakkprrocalndr = () => {
           <View style={styles.gyymtrakkrprroBottomSpace} />
         </View>
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -566,7 +571,7 @@ const styles = StyleSheet.create({
     gap: 4,
   },
 
-  gyymtrakkrprroRoot: {flex: 1, backgroundColor: '#1A1E3D'},
+  gyymtrakkrprroRoot: {flex: 1},
   gyymtrakkrprroScroll: {paddingTop: 18},
   gyymtrakkrprroBottomSpace: {height: 140},
 

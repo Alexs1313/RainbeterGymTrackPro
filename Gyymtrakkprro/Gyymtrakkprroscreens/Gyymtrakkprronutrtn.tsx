@@ -319,7 +319,11 @@ const Gyymtrakkprronutrtn = () => {
 
   if (gyymtrakkrprronutrtnView === 'add') {
     return (
-      <View style={styles.gyymtrakkrprronutrtnRoot}>
+      <LinearGradient
+        colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 1}}
+        style={styles.gyymtrakkrprronutrtnRoot}>
         <KeyboardAvoidingView
           style={styles.gyymtrakkrprronutrtnFlex1}
           behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
@@ -440,12 +444,16 @@ const Gyymtrakkprronutrtn = () => {
             </View>
           </TouchableOpacity>
         </View>
-      </View>
+      </LinearGradient>
     );
   }
 
   return (
-    <View style={styles.gyymtrakkrprronutrtnRoot}>
+    <LinearGradient
+      colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 1}}
+      style={styles.gyymtrakkrprronutrtnRoot}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.gyymtrakkrprronutrtnMainScroll}>
@@ -636,7 +644,7 @@ const Gyymtrakkprronutrtn = () => {
           </LinearGradient>
         </TouchableOpacity>
       </View>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -660,7 +668,6 @@ const styles = StyleSheet.create({
 
   gyymtrakkrprronutrtnRoot: {
     flex: 1,
-    backgroundColor: '#1A1E3D',
   },
   gyymtrakkrprronutrtnFlex1: {flex: 1},
   gyymtrakkrprronutrtnSpacerSm: {height: 120},

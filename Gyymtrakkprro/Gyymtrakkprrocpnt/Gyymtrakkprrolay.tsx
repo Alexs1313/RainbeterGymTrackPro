@@ -1,5 +1,6 @@
 import React from 'react';
 import {ScrollView, StyleSheet, View} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Gyymtrakkprrolay = ({
   children,
@@ -10,14 +11,16 @@ const Gyymtrakkprrolay = ({
   bounces?: boolean;
 }) => {
   return (
-    <View style={styles.gyymtrakkrprrocontainer}>
+    <LinearGradient
+      colors={['rgb(30, 37, 94)', 'rgb(16, 18, 38)']}
+      style={styles.gyymtrakkrprrocontainer}>
       <ScrollView
         bounces={bounces}
         contentContainerStyle={styles.gyymtrakkrprroscrollContent}
         showsVerticalScrollIndicator={false}>
         {children}
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 };
 

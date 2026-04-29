@@ -370,7 +370,9 @@ const Gyymtrakkprrowrkot = () => {
 
   if (gyymtrakkrprroView === 'add') {
     return (
-      <View style={styles.gyymtrakkrprroRoot}>
+      <LinearGradient
+        colors={['rgb(30, 37, 94)', 'rgb(16, 18, 38)']}
+        style={styles.gyymtrakkrprroRoot}>
         <KeyboardAvoidingView
           style={styles.gyymtrakkrprroFlex1}
           behavior={Platform.OS === 'ios' ? 'padding' : undefined}>
@@ -519,12 +521,16 @@ const Gyymtrakkprrowrkot = () => {
             </View>
           </TouchableOpacity>
         </View>
-      </View>
+      </LinearGradient>
     );
   }
 
   return (
-    <View style={styles.gyymtrakkrprroRoot}>
+    <LinearGradient
+      colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 1}}
+      style={styles.gyymtrakkrprroRoot}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.gyymtrakkrprroMainScroll}>
@@ -749,7 +755,7 @@ const Gyymtrakkprrowrkot = () => {
           </LinearGradient>
         </TouchableOpacity>
       </View>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -772,7 +778,6 @@ const styles = StyleSheet.create({
 
   gyymtrakkrprroRoot: {
     flex: 1,
-    backgroundColor: '#1A1E3D',
   },
 
   gyymtrakkrprroFlex1: {flex: 1},

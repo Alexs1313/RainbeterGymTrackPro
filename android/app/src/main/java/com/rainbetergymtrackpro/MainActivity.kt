@@ -1,4 +1,4 @@
-package com.rainbetergymtrackpro
+package com.rainbest.protrack
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate

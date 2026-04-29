@@ -24,7 +24,7 @@ const gyymtrakkrprroSlides = [
     gyymtrakkrprroTitle:
       Platform.OS === 'ios'
         ? 'Welcome to\nRainbest ProTrack'
-        : 'Welcome to\nFitTrack Pro',
+        : 'Welcome to\nRainbest ProTrack',
     gyymtrakkrprroDescription:
       'Your ultimate fitness companion. Track workouts, monitor nutrition, and crush your goals every single day.',
     gyymtrakkrprroImage: require('../../assets/i/gyymtrakkprroonbg1.png'),
@@ -174,7 +174,11 @@ const Gyymtrakkprroonb = ({navigation}: Props) => {
   }
 
   return (
-    <View style={styles.gyymtrakkrprroSlideContainer}>
+    <LinearGradient
+      colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 1}}
+      style={styles.gyymtrakkrprroSlideContainer}>
       {gyymtrakkrprroCurrentSlide.gyymtrakkrprroImage ? (
         <ImageBackground
           source={gyymtrakkrprroCurrentSlide.gyymtrakkrprroImage}
@@ -235,7 +239,7 @@ const Gyymtrakkprroonb = ({navigation}: Props) => {
           </View>
         </View>
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 };
 

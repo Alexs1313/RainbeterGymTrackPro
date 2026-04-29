@@ -1,4 +1,4 @@
-package com.rainbetergymtrackpro
+package com.rainbest.protrack
 
 import android.app.Application
 import com.facebook.react.PackageList

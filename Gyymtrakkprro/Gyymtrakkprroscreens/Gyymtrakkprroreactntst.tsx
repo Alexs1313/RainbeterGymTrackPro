@@ -373,7 +373,11 @@ const Gyymtrakkprroreactntst = () => {
 
   if (gyymtrakkrprroPhase === 'results') {
     return (
-      <View style={styles.gyymtrakkrprroRoot}>
+      <LinearGradient
+        colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 1}}
+        style={styles.gyymtrakkrprroRoot}>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.gyymtrakkrprroPad}>
@@ -480,13 +484,17 @@ const Gyymtrakkprroreactntst = () => {
             <View style={styles.gyymtrakkrprroSpacerBottom} />
           </View>
         </ScrollView>
-      </View>
+      </LinearGradient>
     );
   }
 
   if (gyymtrakkrprroPhase === 'game') {
     return (
-      <View style={styles.gyymtrakkrprroRoot}>
+      <LinearGradient
+        colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 1}}
+        style={styles.gyymtrakkrprroRoot}>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={{flexGrow: 1, paddingBottom: 120}}>
@@ -576,12 +584,16 @@ const Gyymtrakkprroreactntst = () => {
             </View>
           </View>
         </ScrollView>
-      </View>
+      </LinearGradient>
     );
   }
 
   return (
-    <View style={styles.gyymtrakkrprroRoot}>
+    <LinearGradient
+      colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 1}}
+      style={styles.gyymtrakkrprroRoot}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.gyymtrakkrprroPad}>
@@ -711,7 +723,7 @@ const Gyymtrakkprroreactntst = () => {
           <Text style={styles.gyymtrakkrprroPrimaryBtnText}>Start Game</Text>
         </TouchableOpacity>
       </View>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -738,7 +750,6 @@ const styles = StyleSheet.create({
 
   gyymtrakkrprroRoot: {
     flex: 1,
-    backgroundColor: '#1A1E3D',
   },
 
   gyymtrakkrprroPad: {

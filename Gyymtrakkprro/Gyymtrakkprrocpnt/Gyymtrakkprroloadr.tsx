@@ -5,66 +5,90 @@ import React, {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import WebView from 'react-native-webview';
 
-const gyymtrakkprrohtmlloader = `<!DOCTYPE html>
-<html>
-<head>
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-<style>
-  body {
-    margin: 0;
-    padding: 0;
-    background: transparent;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
-  }
+const gyymtrakkprrohtmlloader = `  <!DOCTYPE html>
+  <html>
+    <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <style>
+        body {
+          margin: 0;
+          padding: 0;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          height: 100vh;
+          background: transparent;
+        }
 
-  .loading-wave {
-    width: 300px;
-    height: 100px;
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-  }
+        .spinner {
+          width: 44px;
+          height: 44px;
+          animation: spinner-y0fdc1 2s infinite ease;
+          transform-style: preserve-3d;
+          position: relative;
+        }
 
-  .loading-bar {
-    width: 20px;
-    height: 10px;
-    margin: 0 5px;
-    background-color: #3498db;
-    border-radius: 5px;
-    animation: loading-wave-animation 1s ease-in-out infinite;
-  }
+        .spinner div {
+          background-color: rgba(0,77,255,0.2);
+          height: 100%;
+          position: absolute;
+          width: 100%;
+          border: 2px solid #004dff;
+        }
 
-  .loading-bar:nth-child(2) {
-    animation-delay: 0.1s;
-  }
+        .spinner div:nth-of-type(1) {
+          transform: translateZ(-22px) rotateY(180deg);
+        }
 
-  .loading-bar:nth-child(3) {
-    animation-delay: 0.2s;
-  }
+        .spinner div:nth-of-type(2) {
+          transform: rotateY(-270deg) translateX(50%);
+          transform-origin: top right;
+        }
 
-  .loading-bar:nth-child(4) {
-    animation-delay: 0.3s;
-  }
+        .spinner div:nth-of-type(3) {
+          transform: rotateY(270deg) translateX(-50%);
+          transform-origin: center left;
+        }
 
-  @keyframes loading-wave-animation {
-    0% { height: 10px; }
-    50% { height: 50px; }
-    100% { height: 10px; }
-  }
-</style>
-</head>
-<body>
-  <div class="loading-wave">
-    <div class="loading-bar"></div>
-    <div class="loading-bar"></div>
-    <div class="loading-bar"></div>
-    <div class="loading-bar"></div>
-  </div>
-</body>
-</html>`;
+        .spinner div:nth-of-type(4) {
+          transform: rotateX(90deg) translateY(-50%);
+          transform-origin: top center;
+        }
+
+        .spinner div:nth-of-type(5) {
+          transform: rotateX(-90deg) translateY(50%);
+          transform-origin: bottom center;
+        }
+
+        .spinner div:nth-of-type(6) {
+          transform: translateZ(22px);
+        }
+
+        @keyframes spinner-y0fdc1 {
+          0% {
+            transform: rotate(45deg) rotateX(-25deg) rotateY(25deg);
+          }
+          50% {
+            transform: rotate(45deg) rotateX(-385deg) rotateY(25deg);
+          }
+          100% {
+            transform: rotate(45deg) rotateX(-385deg) rotateY(385deg);
+          }
+        }
+      </style>
+    </head>
+
+    <body>
+      <div class="spinner">
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+        <div></div>
+      </div>
+    </body>
+  </html>`;
 
 const Gyymtrakkprroloadr = () => {
   const gyymtrakkprroNavigation = useNavigation();
@@ -88,7 +112,11 @@ const Gyymtrakkprroloadr = () => {
           <Image
             source={require('../../assets/i/gyymtrakkprroload.png')}
             style={{
-              top: 20,
+              width: 240,
+              height: 240,
+              borderRadius: 120,
+              top: 50,
+              right: 5,
             }}
           />
         </View>

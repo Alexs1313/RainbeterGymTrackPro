@@ -466,7 +466,11 @@ const Gyymtrakkprrotipps = () => {
   // ── Tip detail view ─────────────────────────────────────────────────────────
   if (gyymtrakkrprroView === 'detail' && gyymtrakkrprroSelectedTip) {
     return (
-      <View style={styles.gyymtrakkrprroRoot}>
+      <LinearGradient
+        colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 1}}
+        style={styles.gyymtrakkrprroRoot}>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.gyymtrakkrprroPad}>
@@ -558,14 +562,17 @@ const Gyymtrakkprrotipps = () => {
             <View style={styles.gyymtrakkrprroSpacerBottom} />
           </View>
         </ScrollView>
-      </View>
+      </LinearGradient>
     );
   }
 
-  // ── Category view ───────────────────────────────────────────────────────────
   if (gyymtrakkrprroView === 'category') {
     return (
-      <View style={styles.gyymtrakkrprroRoot}>
+      <LinearGradient
+        colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+        start={{x: 0, y: 0}}
+        end={{x: 1, y: 1}}
+        style={styles.gyymtrakkrprroRoot}>
         <ScrollView
           showsVerticalScrollIndicator={false}
           contentContainerStyle={styles.gyymtrakkrprroPad}>
@@ -686,13 +693,17 @@ const Gyymtrakkprrotipps = () => {
             <View style={styles.gyymtrakkrprroSpacerBottom} />
           </View>
         </ScrollView>
-      </View>
+      </LinearGradient>
     );
   }
 
   // ── Hub view ────────────────────────────────────────────────────────────────
   return (
-    <View style={styles.gyymtrakkrprroRoot}>
+    <LinearGradient
+      colors={['rgb(35, 44, 115)', 'rgb(9, 11, 32)']}
+      start={{x: 0, y: 0}}
+      end={{x: 1, y: 1}}
+      style={styles.gyymtrakkrprroRoot}>
       <ScrollView
         showsVerticalScrollIndicator={false}
         contentContainerStyle={styles.gyymtrakkrprroHubPad}>
@@ -790,7 +801,7 @@ const Gyymtrakkprrotipps = () => {
           <View style={styles.gyymtrakkrprroSpacerBottom} />
         </View>
       </ScrollView>
-    </View>
+    </LinearGradient>
   );
 };
 
@@ -815,7 +826,7 @@ const styles = StyleSheet.create({
     marginBottom: 7,
   },
 
-  gyymtrakkrprroRoot: {flex: 1, backgroundColor: '#1A1E3D'},
+  gyymtrakkrprroRoot: {flex: 1},
   gyymtrakkrprroFlex1: {flex: 1},
   gyymtrakkrprroIconText: {fontSize: 18},
   gyymtrakkrprroSpacerSm: {height: 10},
